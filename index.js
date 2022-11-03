@@ -1,13 +1,10 @@
-const express = require("express");
-const app = express();
+const http = require("http");
 
-app.listen(process.env.PORT || 3000);
+http
+  .createServer(function (req, res) {
+    res.writeHead(200, { "Content-Type": "text/plain" });
+    res.end("Hello World\n");
+  })
+  .listen(process.env.PORT || 8080, "127.0.0.1");
 
-app.use(express.static("public"));
-
-//index.js
-app.get("/", (req, res) => {
-  res.sendFile("index.html", { root: path.join(__dirname, "public") });
-});
-
-module.exports = app;
+console.log("Server currently listening...");
