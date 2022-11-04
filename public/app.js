@@ -12,6 +12,7 @@ const fetchOwnerCardList = () => {
       console.log(allSpikemmon);
     })
     .catch((error) => {
+      console.log("poule");
       console.log(error);
     });
 };

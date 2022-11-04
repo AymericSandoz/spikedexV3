@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 app.enable("view cache");
 var cors = require("cors");
 app.use(cors());
-
+require("./config/db");
 app.use(express.static("./public"));
 app.get("/", (req, res) => {
   res.sendFile("index.html", { root: path.join(__dirname, "./public") });
@@ -43,6 +43,9 @@ app.use((req, res, next) => {
 app.use("/api/card", CardsRoutes);
 
 //server
-app.listen(process.env.PORT, () => {
-  console.log(`Listening on port ${process.env.PORT}`);
+// app.listen(process.env.PORT, () => {
+//   console.log(`Listening on port ${process.env.PORT}`);
+// });
+app.listen(8000, () => {
+  console.log(`Listening on port 8000`);
 });

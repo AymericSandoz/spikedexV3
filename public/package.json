@@ -1,0 +1,11 @@
+{
+  "name": "public",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "npx http-server .  -p 3000 -P \"http://localhost:3000?\"  -c-1 "
+  },
+  "author": "",
+  "license": "ISC"
+}
