@@ -5,6 +5,6 @@ const router = express.Router(); //création d'un routeur express dans lequel on
 const stuffCtrl = require("../controllers/card");
 //Routes
 
-router.get("/", stuffCtrl.card);
+router.get("/", stuffCtrl.getAllCards);
 
 module.exports = router; //exportations de notre routeur
