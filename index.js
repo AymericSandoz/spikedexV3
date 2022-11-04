@@ -10,7 +10,7 @@
 const express = require("express"); //framework qui permet de coder plus rapidement.
 require("dotenv").config({ path: "./back/config/.env" });
 
-const CardsRoutes = require("./back/routes/Card");
+const CardsRoutes = require("./back/routes/card");
 const path = require("path"); //accéder au path de notre serveur :
 
 const app = express();
