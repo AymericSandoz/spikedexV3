@@ -10,6 +10,7 @@ const fetchOwnerCardList = () => {
     .then((allSpikemmon) => {
       console.log("couscous");
       console.log(allSpikemmon);
+      listePoke.innerHTML = allSpikemmon;
     })
     .catch((error) => {
       console.log("poule");
